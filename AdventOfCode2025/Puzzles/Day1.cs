@@ -4,13 +4,13 @@ namespace AdventOfCode2025.Puzzles
 {
     public class Day1 : IPuzzle
     {
-        public record Rotation
+        private record Rotation
         {
             public Direction Direction { get; set; }
             public int Value { get; set; }
         }
 
-        public enum Direction
+        private enum Direction
         {
             Left,
             Right
