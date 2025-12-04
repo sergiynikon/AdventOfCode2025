@@ -23,8 +23,11 @@ public class Runner
         }
 
         string input = File.ReadAllText(InputFilePath);
-        string result = puzzle.Solve(input);
+        string[] result = puzzle.Solve(input);
 
-        Console.WriteLine($"Result: {result}");
+        for (int i = 0; i < result.Length; i++)
+        {
+            Console.WriteLine($"Part {i + 1} Result: {result[i]}");
+        }
     }
 }

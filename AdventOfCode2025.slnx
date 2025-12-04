@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="AdventOfCode2025/AdventOfCode2025.csproj" />
+  <Project Path="UnitTests/UnitTests.csproj" Id="fb430475-2416-4a1b-a71d-e6b05b367c54" />
 </Solution>

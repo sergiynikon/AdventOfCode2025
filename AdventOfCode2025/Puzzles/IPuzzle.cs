@@ -2,6 +2,6 @@
 {
     public interface IPuzzle
     {
-        public string Solve(string input);
+        public string[] Solve(string input);
     }
 }
