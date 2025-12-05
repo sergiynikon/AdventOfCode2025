@@ -4,7 +4,7 @@ namespace AdventOfCode2025;
 
 public class Runner
 {
-    private const string DefaultPuzzleName = "Day4";
+    private const string DefaultPuzzleName = "Day5";
     private const string InputFilePath = "Input.txt";
     private readonly IPuzzleFactory _puzzleFactory;
 
