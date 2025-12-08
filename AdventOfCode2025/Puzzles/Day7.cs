@@ -25,15 +25,11 @@ public class Day7 : IPuzzle
 
     public string[] Solve(string input)
     {
-        DateTimeOffset startTime = DateTimeOffset.Now;
         var diagram = ParseInput(input);
 
         var part1Result = SolvePart1(diagram);
         var part2Result = SolvePart2(diagram);
 
-        DateTimeOffset endTime = DateTimeOffset.Now;
-
-        Console.WriteLine(endTime - startTime);
         return [part1Result.ToString(), part2Result.ToString()];
     }
 
@@ -147,34 +143,6 @@ public class Day7 : IPuzzle
 
         return currentTimelines.Sum(tl => tl.Count);
     }
-
-    //private int GetPathCounts(DiagramItem[,] diagram, int x, int y, int count)
-    //{
-    //    if (y == 0)
-    //    {
-    //        return diagram[x, y] == DiagramItem.EntryPoint ? 1 : 0;
-    //    }
-
-    //    if (diagram[x, y] == DiagramItem.Splitter)
-    //    {
-    //        return 0;
-    //    }
-    //    if (x - 1 >= 0 && diagram[x - 1, y] == DiagramItem.Splitter)
-    //    {
-    //        count += GetPathCounts(diagram, x - 1, y - 2, 0);
-    //    }
-    //    if (x + 1 < diagram.GetLength(0) && diagram[x + 1, y] == DiagramItem.Splitter)
-    //    {
-    //        count += GetPathCounts(diagram, x + 1, y - 2, 0);
-    //    }
-
-    //    if (diagram[x, y] == DiagramItem.EmptySpace)
-    //    {
-    //        count += GetPathCounts(diagram, x, y - 2, 0);
-    //    }
-
-    //    return count;
-    //}
 
     private static DiagramItem[,] ParseInput(string input)
     {
